@@ -50,3 +50,19 @@ source ~/.zshrc
 jira-update        # print to stdout
 jira-update -c     # copy to clipboard
 ```
+
+**Example output**
+
+```
+$ jira-update -c
+Update:
+- (code complete) DPI-4897 DG-257: Add column `imps{}.native.templates` to rosetta
+  *
+- (in progress) DPI-4876 Complete Kafka Authorization Migration Plan
+  *
+- (in progress) DPI-4875 Create Kafka Security Dashboard
+  *
+- (todo) DPI-4902 Enrich Pipeline shouldn't insert negative TTL data to Cassandra
+
+Copied to clipboard!
+```
