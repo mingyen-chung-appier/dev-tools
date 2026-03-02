@@ -35,12 +35,6 @@ cd ~/code/appier/dev-tools && bash install.sh
 
 > `install.sh` creates symlinks from `~/.local/bin/` to each script in `bin/`, so the tools are available system-wide without modifying your PATH (assuming `~/.local/bin` is already in PATH).
 
-**Uninstall**
-
-```bash
-rm ~/.local/bin/jira-update
-```
-
 2. Add your Jira credentials to `~/.zshrc`:
 
 ```bash
@@ -65,4 +59,10 @@ source ~/.zshrc
 ```bash
 jira-update        # print to stdout
 jira-update -c     # copy to clipboard
+```
+
+**Uninstall**
+
+```bash
+rm ~/.local/bin/jira-update
 ```
