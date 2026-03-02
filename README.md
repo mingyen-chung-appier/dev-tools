@@ -24,7 +24,11 @@ echo 'export JIRA_EMAIL="you@appier.com"' >> ~/.zshrc
 echo 'export JIRA_API_TOKEN="your-api-token"' >> ~/.zshrc
 ```
 
-> Get your API token at https://id.atlassian.com/manage-profile/security/api-tokens
+> **Getting your API token:**
+> 1. Go to https://id.atlassian.com/manage-profile/security/api-tokens
+> 2. Click **Create API token**
+> 3. Give it a label (e.g. `jira-update`) and click **Create**
+> 4. Copy the token and use it as `JIRA_API_TOKEN`
 
 3. Reload your shell:
 
