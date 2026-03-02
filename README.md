@@ -8,6 +8,22 @@ Developer productivity tools for Appier.
 
 Generates a Jira status update for Slack, listing your in-progress tickets sorted by status.
 
+**Example output**
+
+```
+$ jira-update -c
+Update:
+- (code complete) DPI-4897 DG-257: Add column `imps{}.native.templates` to rosetta
+  *
+- (in progress) DPI-4876 Complete Kafka Authorization Migration Plan
+  *
+- (in progress) DPI-4875 Create Kafka Security Dashboard
+  *
+- (todo) DPI-4902 Enrich Pipeline shouldn't insert negative TTL data to Cassandra
+
+Copied to clipboard!
+```
+
 **Setup**
 
 1. Clone the repo and run the install script:
@@ -49,20 +65,4 @@ source ~/.zshrc
 ```bash
 jira-update        # print to stdout
 jira-update -c     # copy to clipboard
-```
-
-**Example output**
-
-```
-$ jira-update -c
-Update:
-- (code complete) DPI-4897 DG-257: Add column `imps{}.native.templates` to rosetta
-  *
-- (in progress) DPI-4876 Complete Kafka Authorization Migration Plan
-  *
-- (in progress) DPI-4875 Create Kafka Security Dashboard
-  *
-- (todo) DPI-4902 Enrich Pipeline shouldn't insert negative TTL data to Cassandra
-
-Copied to clipboard!
 ```
