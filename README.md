@@ -10,11 +10,11 @@ Generates a Jira status update for Slack, listing your in-progress tickets sorte
 
 **Setup**
 
-1. Clone the repo and add `bin/` to your PATH:
+1. Clone the repo and run the install script:
 
 ```bash
 git clone git@github.com:mingyen-chung-appier/dev-tools.git ~/code/appier/dev-tools
-echo 'export PATH="$HOME/code/appier/dev-tools/bin:$PATH"' >> ~/.zshrc
+cd ~/code/appier/dev-tools && bash install.sh
 ```
 
 2. Add your Jira credentials to `~/.zshrc`:
