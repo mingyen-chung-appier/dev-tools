@@ -20,8 +20,8 @@ echo 'export PATH="$HOME/code/appier/dev-tools/bin:$PATH"' >> ~/.zshrc
 2. Add your Jira credentials to `~/.zshrc`:
 
 ```bash
-export JIRA_EMAIL='you@appier.com'
-export JIRA_API_TOKEN='your-api-token'
+echo 'export JIRA_EMAIL="you@appier.com"' >> ~/.zshrc
+echo 'export JIRA_API_TOKEN="your-api-token"' >> ~/.zshrc
 ```
 
 > Get your API token at https://id.atlassian.com/manage-profile/security/api-tokens
