@@ -34,7 +34,7 @@ STATUS_ORDER = {
 
 
 def fetch_issues():
-    jql = "assignee = currentUser() AND status NOT IN (Backlog) AND issuetype != Epic ORDER BY updated DESC"
+    jql = "assignee = currentUser() AND status NOT IN (Backlog) AND issuetype != Epic AND (status != Done OR status changed to Done after -4d) ORDER BY updated DESC"
     params = urllib.parse.urlencode({
         "jql": jql,
         "fields": "summary,status",
