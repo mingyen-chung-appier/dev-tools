@@ -24,16 +24,17 @@ JIRA_API_TOKEN = os.environ.get("JIRA_API_TOKEN")
 
 # Custom sort order: further along = listed first
 STATUS_ORDER = {
-    "code complete": 0,
-    "in review": 1,
-    "qa": 2,
-    "in progress": 3,
-    "to do": 4,
+    "done": 0,
+    "code complete": 1,
+    "in review": 2,
+    "qa": 3,
+    "in progress": 4,
+    "to do": 5,
 }
 
 
 def fetch_issues():
-    jql = "assignee = currentUser() AND status NOT IN (Done, Backlog) AND issuetype != Epic ORDER BY updated DESC"
+    jql = "assignee = currentUser() AND status NOT IN (Backlog) AND issuetype != Epic ORDER BY updated DESC"
     params = urllib.parse.urlencode({
         "jql": jql,
         "fields": "summary,status",
@@ -78,6 +79,8 @@ def main():
         status = format_status(issue["fields"]["status"]["name"])
         if status == "to do":
             lines.append(f"- (todo) {key} {summary}")
+        elif status == "done":
+            lines.append(f"- (done) {key} {summary}")
         else:
             lines.append(f"- ({status}) {key} {summary}")
             lines.append(f"  * ")
